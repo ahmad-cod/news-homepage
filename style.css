@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 5px;
+}
+#toggleMenu {
+    font-size: 50px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+/* #menuList {
+    
+} */
