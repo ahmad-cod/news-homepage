@@ -3,6 +3,9 @@
     margin: 0;
     padding: 5px;
 }
+.container {
+    margin-bottom: 15px;
+}
 #toggleMenu {
     font-size: 50px;
 }
@@ -10,6 +13,76 @@ nav {
     display: flex;
     justify-content: space-between;
 }
-/* #menuList {
-    
-} */
+
+#menuList {
+    list-style: none;
+    width: 50vw;
+    /* height: 50vh; */
+}
+
+.intro img {
+    width: 100%;
+    /* margin: auto; */
+}
+.intro p {
+    color: hsl(236, 13%, 42%);
+    padding: 12px 0;
+}
+.intro button {
+    padding: 15px 30px;
+    color: hsl(36, 100%, 99%);
+    background-color: hsl(5, 85%, 63%);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    outline: none;
+    border: none;
+}
+
+.latest-news {
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+}
+.latest-news p {
+    color: hsl(233, 8%, 79%);
+}
+.latest-news h2 {
+    margin: 5px 25px;
+    color: hsl(35, 77%, 62%);
+    font-size: 32px;
+}
+.new-news-item {
+    padding: 15px 0;
+    margin: 0 25px;
+}
+.underline {
+    border-bottom: 0.1px solid hsl(233, 8%, 79%);
+}
+.popular-news-item {
+    display: flex;
+}
+/* 
+## Colors
+
+### Primary
+
+- Soft orange: hsl(35, 77%, 62%)
+- Soft red: hsl(5, 85%, 63%)
+
+### Neutral
+
+Off-white: hsl(36, 100%, 99%)
+Grayish blue: hsl(233, 8%, 79%)
+Dark grayish blue: hsl(236, 13%, 42%)
+Very dark blue: hsl(240, 100%, 5%)
+
+*/
+.popular-news-item h2 {
+    font-size: 30px;
+    color: hsl(233, 8%, 79%);
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+.popular-news-item img {
+    width: 120px;
+    /* height: auto; */
+}
