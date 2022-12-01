@@ -1,13 +1,35 @@
-* {
+*, *::before, *::after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 5px;
 }
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+html {
+    color-scheme: light dark;
+}
+body {
+    min-height: 100vh;
+}
+img, picture, svg {
+    display: block;
+    max-width: 100%;
+}
+:root {
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+}
+
 .container {
     margin-bottom: 15px;
 }
 #toggleMenu {
-    font-size: 50px;
+    font-size: 40px;
 }
 nav {
     display: flex;
@@ -17,21 +39,19 @@ nav {
 #menuList {
     list-style: none;
     width: 50vw;
-    /* height: 50vh; */
 }
 
-.intro img {
-    width: 100%;
-    /* margin: auto; */
-}
+/* .intro img {
+     margin: auto;
+} */
 .intro p {
-    color: hsl(236, 13%, 42%);
+    color: var(--dark-grayish-blue);
     padding: 12px 0;
 }
 .intro button {
     padding: 15px 30px;
-    color: hsl(36, 100%, 99%);
-    background-color: hsl(5, 85%, 63%);
+    color: var(--off-white);
+    background-color: var(--soft-red);
     text-transform: uppercase;
     letter-spacing: 4px;
     outline: none;
@@ -39,15 +59,15 @@ nav {
 }
 
 .latest-news {
-    background-color: hsl(240, 100%, 5%);
-    color: hsl(36, 100%, 99%);
+    background-color: var(--very-dark-blue);
+    color: var(--off-white);
 }
 .latest-news p {
-    color: hsl(233, 8%, 79%);
+    color: var(--grayish-blue);
 }
 .latest-news h2 {
     margin: 5px 25px;
-    color: hsl(35, 77%, 62%);
+    color: var(--soft-orange);
     font-size: 32px;
 }
 .new-news-item {
@@ -55,30 +75,14 @@ nav {
     margin: 0 25px;
 }
 .underline {
-    border-bottom: 0.1px solid hsl(233, 8%, 79%);
+    border-bottom: 0.1px solid var(--grayish-blue);
 }
 .popular-news-item {
     display: flex;
 }
-/* 
-## Colors
-
-### Primary
-
-- Soft orange: hsl(35, 77%, 62%)
-- Soft red: hsl(5, 85%, 63%)
-
-### Neutral
-
-Off-white: hsl(36, 100%, 99%)
-Grayish blue: hsl(233, 8%, 79%)
-Dark grayish blue: hsl(236, 13%, 42%)
-Very dark blue: hsl(240, 100%, 5%)
-
-*/
 .popular-news-item h2 {
     font-size: 30px;
-    color: hsl(233, 8%, 79%);
+    color: var(--grayish-blue);
     font-weight: 900;
     letter-spacing: 3px;
 }
