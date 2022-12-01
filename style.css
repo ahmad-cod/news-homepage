@@ -4,13 +4,14 @@
 * {
     margin: 0;
     padding: 0;
-    font: inherit;
+    /* font: inherit; */
 }
 html {
     color-scheme: light dark;
 }
 body {
     min-height: 100vh;
+    overflow-x: hidden;
 }
 img, picture, svg {
     display: block;
@@ -24,26 +25,80 @@ img, picture, svg {
     --dark-grayish-blue: hsl(236, 13%, 42%);
     --very-dark-blue: hsl(240, 100%, 5%);
 }
-
+.overall-container {
+    padding: 10px;
+}
 .container {
     margin-bottom: 15px;
 }
-#toggleMenu {
-    font-size: 40px;
+header {
+    margin-bottom: 10px;
 }
-nav {
+.flex {
     display: flex;
+    gap: var(--gap, 2rem);
+}
+.sr-only {
+    left: -100vw;
+    position: absolute;
+}
+.logo {
+    /* width: 50px; */
+    margin-block: 1rem;
+}
+.mobile-nav-toggle {
+    display: none;
+    outline: none;
+}
+.primary-header {
     justify-content: space-between;
+    align-items: center;
 }
-
-#menuList {
+.primary-navigation {
     list-style: none;
-    width: 50vw;
+    padding: 0;
+    margin: 0;
+
+    background: hsl(0 0% 100%);
+}
+.primary-navigation a {
+    text-decoration: none;
 }
 
-/* .intro img {
-     margin: auto;
-} */
+@media (max-width: 35em) {
+    .primary-navigation {
+        --gap: 2em;
+
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+
+        transform: translateX(100%);
+        transition: transform 300ms ease-in;
+    }
+    .primary-navigation[data-visible='true']{
+        transform: translateX(0%);
+    }
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background-color: transparent;
+        background-image: url('/assets/images/icon-menu.svg');
+        background-repeat: no-repeat;
+        border: 0;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+    }
+    .mobile-nav-toggle[aria-expanded='true']{
+        background-image: url('/assets/images/icon-menu-close.svg');
+    }
+}
+
 .intro p {
     color: var(--dark-grayish-blue);
     padding: 12px 0;
