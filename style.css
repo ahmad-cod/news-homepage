@@ -1,6 +1,21 @@
 *, *::before, *::after {
     box-sizing: border-box;
 }
+@font-face {
+    font-family: inter;
+    src: url(assets/fonts/static/Inter-Regular.ttf);
+    font-weight: 400;
+}
+@font-face {
+    font-family: inter-bold;
+    src: url(assets/fonts/static/Inter-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: inter-extraBold;
+    src: url(assets/fonts/static/Inter-ExtraBold.ttf);
+    font-weight: 800;
+}
 * {
     margin: 0;
     padding: 0;
@@ -12,10 +27,17 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
+    
 }
 img, picture, svg {
     display: block;
     max-width: 100%;
+}
+h1, h2 {
+    font-family: inter-extraBold;
+}
+h3, h4, h5 {
+    font-family: inter-bold;
 }
 :root {
     --soft-orange: hsl(35, 77%, 62%);
@@ -24,6 +46,9 @@ img, picture, svg {
     --grayish-blue: hsl(233, 8%, 79%);
     --dark-grayish-blue: hsl(236, 13%, 42%);
     --very-dark-blue: hsl(240, 100%, 5%);
+}
+p {
+    font-size: 15px;
 }
 .overall-container {
     padding: 10px;
@@ -98,7 +123,9 @@ header {
         background-image: url('assets/images/icon-menu-close.svg');
     }
 }
-
+.intro h1 {
+    font-weight: 800;
+}
 .intro p {
     color: var(--dark-grayish-blue);
     padding: 12px 0;
