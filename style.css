@@ -86,17 +86,21 @@ header {
     list-style: none;
     padding: 0;
     margin: 0;
-    padding-right: 20px;
-    color: var(--grayish-blue);
+    padding-right: 5px;
     background: hsl(0 0% 100%);
 }
 .primary-navigation a {
+    /* color: var(--very-dark-blue); */
+
     text-decoration: none;
     padding-bottom: 5px;
     transition: 280ms ease-out;
 }
 .primary-navigation .active, .primary-navigation a:hover {
     border-bottom: 2px solid var(--dark-grayish-blue);
+}
+.primary-navigation a:hover {
+    font-weight: 600;
 }
 
 @media (max-width: 35em) {
